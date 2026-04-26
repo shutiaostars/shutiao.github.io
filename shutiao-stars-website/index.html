@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="薯条 stars — 天文摄影师，专注于星空、深空、暗夜风光摄影。追逐银河与星光，记录宇宙的静默诗篇。">
+  <meta name="keywords" content="天文摄影, 星空摄影, 深空摄影, 银河, 星云, 薯条stars">
+  <meta property="og:title" content="薯条 stars — 天文摄影师">
+  <meta property="og:description" content="追逐银河与星光，记录宇宙的静默诗篇">
+  <meta property="og:type" content="website">
+  <title>薯条 stars — 天文摄影师</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2"/>
+          <path d="M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
+        </svg>
+      </div>
+      <span>薯条 stars</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="works.html">作品</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="journal.html">日志</a></li>
+      <li><a href="contact.html">联系</a></li>
+    </ul>
+    
+    <button class="nav-menu-btn" aria-label="打开菜单">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">✕</button>
+    <a href="works.html">作品</a>
+    <a href="about.html">关于</a>
+    <a href="journal.html">日志</a>
+    <a href="contact.html">联系</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="starfield">
+      <div class="stars-layer stars-1"></div>
+      <div class="stars-layer stars-2"></div>
+      <div class="stars-layer stars-3"></div>
+      <div class="nebula"></div>
+    </div>
+    
+    <div class="hero-content">
+      <p class="hero-label">天文摄影 · 星河揽照</p>
+      <h1 class="hero-name">
+        薯条 <em>stars</em>
+      </h1>
+      <p class="hero-subtitle">追逐银河与星光，记录宇宙的静默诗篇</p>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Milky Way · Deep Sky · Nightscape</p>
+      
+      <div class="hero-actions">
+        <a href="works.html" class="btn btn-primary">浏览作品</a>
+        <a href="about.html" class="btn btn-secondary">了解更多</a>
+      </div>
+    </div>
+    
+    <div class="hero-scroll">
+      <span>向下探索</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Featured Works Section -->
+  <section class="section featured-section" id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Featured Works</p>
+        <h2 class="section-title">精选作品</h2>
+        <p class="section-subtitle">银河星空、星空延时、深空、自然风光，记录宇宙的静默诗篇</p>
+      </div>
+      
+      <div class="featured-grid">
+        <!-- Featured 01 - 银河星空 -->
+        <a href="works.html#milkyway" class="featured-card reveal">
+          <div class="featured-card-bg" style="background-image: url('works/images/天峻石林银河拱桥.jpg')"></div>
+          <div class="featured-card-overlay"></div>
+          <div class="featured-card-content">
+            <span class="featured-card-num">01</span>
+            <h3 class="featured-card-title">银河星空</h3>
+            <p class="featured-card-desc">天峻石林、慕士塔格、鳄鱼湾……每一帧银河，都是与宇宙的对话</p>
+          </div>
+        </a>
+        
+        <!-- Featured 02 - 星空延时 -->
+        <a href="works.html#timelapse" class="featured-card reveal reveal-delay-1">
+          <div class="featured-card-bg" style="background-image: url('works/images/新疆鳄鱼湾冬季星空.jpg')"></div>
+          <div class="featured-card-overlay"></div>
+          <div class="featured-card-content">
+            <span class="featured-card-num">02</span>
+            <h3 class="featured-card-title">星空延时</h3>
+            <p class="featured-card-desc">慕士塔格峰星轨、日转夜，银河在时间里流动</p>
+          </div>
+        </a>
+        
+        <!-- Featured 03 - 深空 -->
+        <a href="works.html#deepsky" class="featured-card reveal reveal-delay-2">
+          <div class="featured-card-bg" style="background-image: url('works/images/深空-Panstars彗星.jpg')"></div>
+          <div class="featured-card-overlay"></div>
+          <div class="featured-card-content">
+            <span class="featured-card-num">03</span>
+            <h3 class="featured-card-title">深空</h3>
+            <p class="featured-card-desc">C/2025 R3 Panstarrs 彗星，深空世界的静默光辉</p>
+          </div>
+        </a>
+        
+        <!-- Featured 04 - 自然风光 -->
+        <a href="works.html#landscape" class="featured-card reveal reveal-delay-3">
+          <div class="featured-card-bg" style="background-image: url('works/images/星光灌溉翡翠湖.jpg')"></div>
+          <div class="featured-card-overlay"></div>
+          <div class="featured-card-content">
+            <span class="featured-card-num">04</span>
+            <h3 class="featured-card-title">自然风光</h3>
+            <p class="featured-card-desc">日出日落、云海雪山，记录大地与天空的诗</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="section-footer reveal">
+        <a href="works.html" class="btn btn-ghost">
+          查看全部作品
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="section about-preview-section">
+    <div class="container">
+      <div class="about-preview-grid">
+        <div class="about-preview-content reveal">
+          <p class="section-label">About</p>
+          <h2 class="section-title">关于薯条</h2>
+          <p class="about-preview-text">
+            星空摄影师，专注于银河、深空与暗夜风光摄影。
+            多年追星经历，足迹遍布川西高原、内蒙古草原、青海湖畔、云南深谷……
+            用镜头记录宇宙的浩瀚与静谧，用光影讲述星空下的故事。
+          </p>
+          <div class="about-preview-stats">
+            <div class="stat-item">
+              <span class="stat-num">200+</span>
+              <span class="stat-label">天文摄影作品</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">追星目的地</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">5年</span>
+              <span class="stat-label">深耕星空摄影</span>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-secondary">了解更多</a>
+        </div>
+        <div class="about-preview-image reveal reveal-delay-2">
+          <div class="about-image-frame">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="薯条 stars">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview Section -->
+  <section class="section services-preview-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <p class="section-label">Services</p>
+        <h2 class="section-title">商业合作</h2>
+        <p class="section-subtitle">专业天文摄影服务，为您的项目注入星空力量</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8m-4-4v4"/>
+            </svg>
+          </div>
+          <h3 class="service-title">商业拍摄</h3>
+          <p class="service-desc">文旅星空采风、景区宣传、民宿夜景、天文活动跟拍</p>
+        </div>
+        
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="service-title">定制创作</h3>
+          <p class="service-desc">定制银河/深空大片、企业壁纸、海报视觉素材</p>
+        </div>
+        
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32">
+              <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">后期代修</h3>
+          <p class="service-desc">星空RAW精修、堆栈合成、星轨调色、深空处理</p>
+        </div>
+        
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3 class="service-title">教学指导</h3>
+          <p class="service-desc">星空私教、户外采风带队、后期教程一对一</p>
+        </div>
+      </div>
+      
+      <div class="section-footer text-center reveal">
+        <a href="contact.html" class="btn btn-primary">联系合作</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journal Preview Section -->
+  <section class="section journal-preview-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Journal</p>
+        <h2 class="section-title">追星日志</h2>
+        <p class="section-subtitle">记录每一次追星之旅，分享拍摄心得与踩坑经验</p>
+      </div>
+      
+      <div class="journal-grid">
+        <article class="journal-card reveal">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600&q=80" alt="川西追星">
+          </div>
+          <div class="journal-card-content">
+            <span class="journal-card-date">2025.04.15</span>
+            <h3 class="journal-card-title">川西高原：银河拱桥拍摄全记录</h3>
+            <p class="journal-card-excerpt">康定新都桥，海拔4200米，凌晨2点的银河拱桥如约而至……</p>
+            <a href="journal.html" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <article class="journal-card reveal reveal-delay-1">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&q=80" alt="深空摄影">
+          </div>
+          <div class="journal-card-content">
+            <span class="journal-card-date">2025.03.28</span>
+            <h3 class="journal-card-title">猎户座大星云：从拍摄到后期的完整流程</h3>
+            <p class="journal-card-excerpt">M42，深空摄影入门首选目标，分享一下我的拍摄与PixInsight后期思路……</p>
+            <a href="journal.html" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <article class="journal-card reveal reveal-delay-2">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=600&q=80" alt="延时摄影">
+          </div>
+          <div class="journal-card-content">
+            <span class="journal-card-date">2025.03.10</span>
+            <h3 class="journal-card-title">星空延时摄影：设备选择与参数设置</h3>
+            <p class="journal-card-excerpt">从相机设置到后期渲染，一篇讲清楚星空延时的完整工作流……</p>
+            <a href="journal.html" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+      </div>
+      
+      <div class="section-footer reveal">
+        <a href="journal.html" class="btn btn-ghost">
+          查看全部日志
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container-narrow text-center">
+      <div class="reveal">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">开启一场星野之旅</h2>
+        <p class="section-subtitle mb-xl">
+          合作拍摄、展览邀请、器材交流，或只是想聊聊星空——<br>
+          欢迎随时联系。
+        </p>
+        <a href="contact.html" class="btn btn-primary">联系方式</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <h3 class="footer-brand">薯条 stars</h3>
+          <p class="footer-desc">天文摄影师，专注于星空、深空与暗夜风光摄影。追逐银河与星光，记录宇宙的静默诗篇。</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="微博">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.573h.014zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.579-.18-.401-.649.386-1.026.426-1.911.003-2.543-.793-1.188-2.962-1.125-5.451-.032 0 0-.782.344-.583-.281.381-1.236.324-2.272-.269-2.871-1.349-1.361-4.938.051-8.018 3.155C1.603 10.476 0 12.815 0 14.858c0 3.908 5.023 6.286 9.94 6.286 6.445 0 10.731-3.74 10.731-6.71 0-1.795-1.515-2.81-2.722-3.185zM22.469 5.668c-1.273-1.414-3.154-2.002-4.873-1.671l.122-.0016c-.396.057-.67.42-.613.816.057.396.42.67.816.613 1.304-.233 2.733.213 3.697 1.283.967 1.073 1.262 2.523.893 3.78-.07.325.097.657.412.758.318.1.66-.077.76-.395.482-1.674.1-3.575-1.214-5.168zm-2.216 1.912c-.632-.701-1.558-.979-2.406-.786-.33.075-.537.404-.461.734.075.33.404.537.734.461.467-.106 1.005.052 1.353.438.347.385.449.911.305 1.361-.101.311.069.646.38.747.311.102.646-.069.747-.38.256-.794.063-1.712-.452-2.575z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="小红书">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="B站">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906L17.813 4.653zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773H5.333zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="500px">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-nav-col">
+          <h4 class="footer-title">导航</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="works.html">作品</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="journal.html">日志</a></li>
+            <li><a href="contact.html">联系</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav-col">
+          <h4 class="footer-title">作品分类</h4>
+          <ul class="footer-links">
+            <li><a href="works.html#milkyway">银河星空</a></li>
+            <li><a href="works.html#timelapse">星空延时</a></li>
+            <li><a href="works.html#deepsky">深空</a></li>
+            <li><a href="works.html#landscape">自然风光</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav-col">
+          <h4 class="footer-title">联系方式</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:shutiao@astro.com">shutiao@astro.com</a></li>
+            <li><a href="contact.html">合作咨询</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 薯条 stars · 保留所有权利</p>
+        <p class="footer-quote">「仰望，是人类最古老的浪漫」</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
