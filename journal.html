@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="薯条 stars 追星日志 — 拍摄记录、技术教程、天象预告">
+  <title>日志 — 薯条 stars</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/journal.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2"/>
+          <path d="M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
+        </svg>
+      </div>
+      <span>薯条 stars</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="works.html">作品</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="journal.html" class="active">日志</a></li>
+      <li><a href="contact.html">联系</a></li>
+    </ul>
+    
+    <button class="nav-menu-btn" aria-label="打开菜单">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">✕</button>
+    <a href="works.html">作品</a>
+    <a href="about.html">关于</a>
+    <a href="journal.html">日志</a>
+    <a href="contact.html">联系</a>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Journal</p>
+        <h1 class="page-title">追星日志</h1>
+        <p class="page-subtitle">记录每一次追星之旅，分享拍摄心得与踩坑经验</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter Tabs -->
+  <div class="journal-tabs">
+    <div class="container">
+      <div class="tabs-buttons">
+        <button class="tab-btn active" data-tab="all">全部</button>
+        <button class="tab-btn" data-tab="journal">行记</button>
+        <button class="tab-btn" data-tab="tutorial">教程</button>
+        <button class="tab-btn" data-tab="forecast">天象</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="section journal-section">
+    <div class="container">
+      
+      <!-- Featured Article -->
+      <article class="journal-featured reveal">
+        <div class="journal-featured-image">
+          <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200&q=80" alt="川西追星">
+        </div>
+        <div class="journal-featured-content">
+          <div class="journal-featured-meta">
+            <span class="journal-category">行记</span>
+            <span class="journal-date">2025.04.15</span>
+          </div>
+          <h2 class="journal-featured-title">川西高原：银河拱桥拍摄全记录</h2>
+          <p class="journal-featured-excerpt">
+            康定新都桥，海拔4200米，凌晨2点的银河拱桥如约而至。从踩点、机位选择、
+            拍摄参数到后期拼接，完整记录这次追星之旅的点点滴滴……
+          </p>
+          <a href="#" class="journal-read-more">
+            阅读全文
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Articles Grid -->
+      <div class="journal-grid">
+        
+        <!-- Article 1 -->
+        <article class="journal-card reveal" data-category="tutorial">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&q=80" alt="深空后期">
+          </div>
+          <div class="journal-card-content">
+            <div class="journal-card-meta">
+              <span class="journal-category">教程</span>
+              <span class="journal-date">2025.03.28</span>
+            </div>
+            <h3 class="journal-card-title">猎户座大星云：从拍摄到后期的完整流程</h3>
+            <p class="journal-card-excerpt">
+              M42，深空摄影入门首选目标。分享一下我的拍摄与PixInsight后期思路，
+              从拍摄计划、赤道仪对极轴、曝光设置到后期处理全流程……
+            </p>
+            <a href="#" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="journal-card reveal reveal-delay-1" data-category="tutorial">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=600&q=80" alt="星空延时">
+          </div>
+          <div class="journal-card-content">
+            <div class="journal-card-meta">
+              <span class="journal-category">教程</span>
+              <span class="journal-date">2025.03.10</span>
+            </div>
+            <h3 class="journal-card-title">星空延时摄影：设备选择与参数设置</h3>
+            <p class="journal-card-excerpt">
+              从相机设置到后期渲染，一篇讲清楚星空延时的完整工作流。
+              包括间隔拍摄设置、LR批处理、LRTimelapse去闪烁、Pr渲染输出……
+            </p>
+            <a href="#" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="journal-card reveal reveal-delay-2" data-category="journal">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80" alt="贡嘎雪山">
+          </div>
+          <div class="journal-card-content">
+            <div class="journal-card-meta">
+              <span class="journal-category">行记</span>
+              <span class="journal-date">2025.02.20</span>
+            </div>
+            <h3 class="journal-card-title">贡嘎雪山：零下25度的星空守候</h3>
+            <p class="journal-card-excerpt">
+              子梅垭口，海拔4600米，夜间气温零下25度。为了这组贡嘎雪山星空，
+              我们在雪地里守候了整整6个小时，终于在凌晨3点等来了云开雾散……
+            </p>
+            <a href="#" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <!-- Article 4 -->
+        <article class="journal-card reveal" data-category="forecast">
+          <div class="journal-card-image forecast-card">
+            <div class="forecast-content">
+              <span class="forecast-icon">🌠</span>
+              <span class="forecast-name">英仙座流星雨</span>
+              <span class="forecast-date">8月12日</span>
+            </div>
+          </div>
+          <div class="journal-card-content">
+            <div class="journal-card-meta">
+              <span class="journal-category">天象预告</span>
+              <span class="journal-date">2025.02.15</span>
+            </div>
+            <h3 class="journal-card-title">2025年英仙座流星雨观测指南</h3>
+            <p class="journal-card-excerpt">
+              英仙座流星雨，年度三大流星雨之一，ZHR可达100+。
+              详细观测时间、最佳地点、拍摄参数设置、后期堆栈技巧……
+            </p>
+            <a href="#" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <!-- Article 5 -->
+        <article class="journal-card reveal reveal-delay-1" data-category="tutorial">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="赤道仪">
+          </div>
+          <div class="journal-card-content">
+            <div class="journal-card-meta">
+              <span class="journal-category">教程</span>
+              <span class="journal-date">2025.01.25</span>
+            </div>
+            <h3 class="journal-card-title">赤道仪对极轴：从入门到精通</h3>
+            <p class="journal-card-excerpt">
+              对极轴是深空摄影的基本功，直接影响星点圆度和追踪精度。
+              本文介绍三种对极轴方法：北极星法、漂移法、软件辅助法……
+            </p>
+            <a href="#" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+        
+        <!-- Article 6 -->
+        <article class="journal-card reveal reveal-delay-2" data-category="journal">
+          <div class="journal-card-image">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="牛背山">
+          </div>
+          <div class="journal-card-content">
+            <div class="journal-card-meta">
+              <span class="journal-category">行记</span>
+              <span class="journal-date">2025.01.10</span>
+            </div>
+            <h3 class="journal-card-title">牛背山日出云海：摄影人的朝圣之路</h3>
+            <p class="journal-card-excerpt">
+              牛背山，被誉为"中国最大的观景平台"。凌晨4点出发，徒步3小时登顶，
+              只为那一刻：贡嘎雪山在云海之上，日照金山，万丈光芒……
+            </p>
+            <a href="#" class="journal-card-link">阅读全文 →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Load More -->
+      <div class="journal-load-more reveal">
+        <button class="btn btn-secondary">
+          加载更多
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 5v14m-7-7h14"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <h3 class="footer-brand">薯条 stars</h3>
+          <p class="footer-desc">天文摄影师，专注于星空、深空与暗夜风光摄影。</p>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-title">导航</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="works.html">作品</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="contact.html">联系</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-title">作品</h4>
+          <ul class="footer-links">
+            <li><a href="works.html#milkyway">银河星空</a></li>
+            <li><a href="works.html#timelapse">星空延时</a></li>
+            <li><a href="works.html#deepsky">深空</a></li>
+            <li><a href="works.html#landscape">自然风光</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-title">联系</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:shutiao@astro.com">shutiao@astro.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 薯条 stars</p>
+        <p class="footer-quote">「仰望，是人类最古老的浪漫」</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Tab filtering for journal
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        
+        // Update active button
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter cards
+        document.querySelectorAll('.journal-card').forEach(card => {
+          if (tab === 'all' || card.dataset.category === tab) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
