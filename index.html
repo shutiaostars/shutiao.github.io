@@ -911,6 +911,27 @@ footer a:hover { color: var(--accent); }
 .works-panel { display: none; }
 .works-panel.active { display: block; }
 
+/* ===== VIDEO MODAL ===== */
+.video-modal {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.92);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.35s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.video-modal.open { opacity: 1; pointer-events: auto; }
+.video-container {
+  width: 88vw;
+  max-width: 1200px;
+}
+.video-container video {
+  width: 100%; display: block;
+  border-radius: 3px;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+}
+
 /* ===== SCROLL REVEAL ===== */
 .reveal {
   opacity: 0;
@@ -1120,32 +1141,32 @@ footer a:hover { color: var(--accent); }
     <!-- ===== 延时摄影 ===== -->
     <div class="works-panel" id="panel-timelapse">
       <div class="timelapse-grid">
-        <div class="timelapse-item" onclick="alert('视频文件较大，请在本地播放：新疆鳄鱼湾银河.mov')">
+        <div class="timelapse-item" onclick="openVideo('assets/videos/crocodile.mov', '鳄鱼湾银河')">
           <img src="assets/timelapse_crocodile.jpg" alt="鳄鱼湾银河" loading="lazy">
           <div class="play-overlay"><div class="play-icon"></div></div>
           <div class="tl-label">鳄鱼湾银河</div>
         </div>
-        <div class="timelapse-item" onclick="alert('视频文件较大，请在本地播放：月岩山稻田延时.mp4')">
+        <div class="timelapse-item" onclick="openVideo('assets/videos/ricefield.mp4', '月岩山稻田延时')">
           <img src="assets/timelapse_ricefield.jpg" alt="月岩山稻田延时" loading="lazy">
           <div class="play-overlay"><div class="play-icon"></div></div>
           <div class="tl-label">月岩山稻田延时</div>
         </div>
-        <div class="timelapse-item" onclick="alert('视频文件较大，请在本地播放：慕士塔格峰日转夜.mov')">
+        <div class="timelapse-item" onclick="openVideo('assets/videos/muztagh_daynight.mov', '慕士塔格峰日转夜')">
           <img src="assets/timelapse_muztagh.jpg" alt="慕士塔格峰日转夜" loading="lazy">
           <div class="play-overlay"><div class="play-icon"></div></div>
           <div class="tl-label">慕士塔格峰日转夜</div>
         </div>
-        <div class="timelapse-item" onclick="alert('视频文件较大，请在本地播放：梅里雪山日照金山.mp4')">
+        <div class="timelapse-item" onclick="openVideo('assets/videos/meili.mp4', '梅里雪山日照金山')">
           <img src="assets/timelapse_meili.jpg" alt="梅里雪山日照金山" loading="lazy">
           <div class="play-overlay"><div class="play-icon"></div></div>
           <div class="tl-label">梅里雪山日照金山</div>
         </div>
-        <div class="timelapse-item" onclick="alert('视频文件较大，请在本地播放：慕士塔格峰地球自转.mov')">
+        <div class="timelapse-item" onclick="openVideo('assets/videos/muztagh_spin.mov', '慕士塔格峰地球自转')">
           <img src="assets/timelapse_muztagh_spin.jpg" alt="慕士塔格峰地球自转" loading="lazy">
           <div class="play-overlay"><div class="play-icon"></div></div>
           <div class="tl-label">慕士塔格峰地球自转</div>
         </div>
-        <div class="timelapse-item" onclick="alert('视频文件较大，请在本地播放：提弄秘境猎户座延时.mp4')">
+        <div class="timelapse-item" onclick="openVideo('assets/videos/milkyway_orion.mp4', '提弄秘境猎户座延时')">
           <img src="assets/timelapse_milkyway.jpg" alt="提弄秘境猎户座延时" loading="lazy">
           <div class="play-overlay"><div class="play-icon"></div></div>
           <div class="tl-label">提弄秘境猎户座延时</div>
@@ -1296,6 +1317,15 @@ footer a:hover { color: var(--accent); }
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
 
+<!-- ===== VIDEO MODAL ===== -->
+<div class="video-modal" id="videoModal" onclick="closeVideo(event)">
+  <button class="lightbox-close" onclick="closeVideo(event)">✕</button>
+  <div class="video-container">
+    <video id="videoPlayer" controls playsinline preload="none"></video>
+  </div>
+  <div class="lightbox-caption" id="videoCaption"></div>
+</div>
+
 <script>
 // ===== THEME TOGGLE =====
 const themeToggle = document.getElementById('themeToggle');
@@ -1356,11 +1386,37 @@ function closeLightbox(e) {
 }
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
+  if (e.key === 'Escape') {
+    if (lightbox.classList.contains('open')) {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if (videoModal.classList.contains('open')) {
+      closeVideo();
+    }
   }
 });
+
+// ===== VIDEO MODAL =====
+const videoModal = document.getElementById('videoModal');
+const videoPlayer = document.getElementById('videoPlayer');
+const videoCaption = document.getElementById('videoCaption');
+
+function openVideo(src, caption) {
+  videoPlayer.src = src;
+  videoCaption.textContent = caption || '';
+  videoModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  videoPlayer.load();
+}
+
+function closeVideo(e) {
+  if (e && e.target !== videoModal && !e.target.classList.contains('lightbox-close')) return;
+  videoPlayer.pause();
+  videoPlayer.removeAttribute('src');
+  videoModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
 
 // ===== SCROLL REVEAL =====
 const observer = new IntersectionObserver((entries) => {
