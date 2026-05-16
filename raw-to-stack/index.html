@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raw to Stack — 星空堆叠工作流</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Prata&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --black:#06060b;
+  --near-black:#0a0a12;
+  --dark:#0f0f1c;
+  --dark-card:#14142a;
+  --dark-border:#1e1e38;
+  --gold:#d4b074;
+  --gold-light:#e8d0a8;
+  --gold-dim:#9a885a;
+  --text-primary:#ede8dd;
+  --text-secondary:#9a92a0;
+  --text-muted:#5c5468;
+  --glow:rgba(212,176,116,0.10);
+}
+body{
+  font-family:'Noto Sans SC',sans-serif;
+  background:var(--black);
+  color:var(--text-primary);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:60px 24px;
+}
+.container{
+  max-width:800px;
+  width:100%;
+}
+h1{
+  font-family:'Sora','Noto Sans SC',sans-serif;
+  font-weight:300;
+  font-size:2.4rem;
+  letter-spacing:-0.02em;
+  margin-bottom:8px;
+  color:var(--gold-light);
+}
+.subtitle{
+  color:var(--text-secondary);
+  font-size:0.95rem;
+  margin-bottom:48px;
+  font-weight:300;
+}
+.section{
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:12px;
+  padding:28px 32px;
+  margin-bottom:20px;
+}
+.section h2{
+  font-family:'Sora','Noto Sans SC',sans-serif;
+  font-weight:400;
+  font-size:1.1rem;
+  color:var(--gold);
+  margin-bottom:16px;
+  letter-spacing:0.03em;
+}
+.section p,.section li{
+  color:var(--text-secondary);
+  font-size:0.9rem;
+  line-height:1.8;
+  font-weight:300;
+}
+.section ul{
+  list-style:none;
+  padding:0;
+}
+.section ul li::before{
+  content:"✦ ";
+  color:var(--gold-dim);
+}
+code{
+  font-family:'SF Mono','Fira Code',monospace;
+  font-size:0.85rem;
+  background:rgba(255,255,255,0.04);
+  color:var(--gold-light);
+  padding:2px 8px;
+  border-radius:4px;
+  border:1px solid var(--dark-border);
+}
+.steps{
+  counter-reset:step;
+  list-style:none;
+  padding:0;
+}
+.steps li{
+  counter-increment:step;
+  padding:8px 0 8px 36px;
+  position:relative;
+  color:var(--text-secondary);
+  font-size:0.9rem;
+  line-height:1.7;
+  font-weight:300;
+}
+.steps li::before{
+  content:counter(step);
+  position:absolute;
+  left:0;
+  top:8px;
+  width:24px;
+  height:24px;
+  background:var(--gold-dim);
+  color:var(--black);
+  font-size:0.75rem;
+  font-weight:600;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.files{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.files div{
+  background:rgba(255,255,255,0.02);
+  border:1px solid var(--dark-border);
+  border-radius:8px;
+  padding:12px 16px;
+}
+.files .name{
+  color:var(--gold-light);
+  font-family:'SF Mono','Fira Code',monospace;
+  font-size:0.8rem;
+  margin-bottom:4px;
+}
+.files .desc{
+  color:var(--text-muted);
+  font-size:0.75rem;
+  font-weight:300;
+}
+a{
+  color:var(--gold);
+  text-decoration:none;
+  transition:color 0.2s;
+}
+a:hover{color:var(--gold-light)}
+.back{
+  display:inline-block;
+  margin-bottom:32px;
+  color:var(--text-muted);
+  font-size:0.85rem;
+  font-weight:300;
+}
+.back:hover{color:var(--text-secondary)}
+@media(max-width:600px){
+  body{padding:32px 16px}
+  h1{font-size:1.6rem}
+  .section{padding:20px}
+  .files{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/" class="back">← 返回首页</a>
+  <h1>Raw to Stack</h1>
+  <p class="subtitle">相机 Raw → Lightroom Classic 导出 → RoboTou Stacker 堆叠 · 一键自动化</p>
+
+  <div class="section">
+    <h2>工作流</h2>
+    <ol class="steps">
+      <li>输入 raw 文件夹路径</li>
+      <li>自动导入 raw 到 Lightroom Classic</li>
+      <li>全选 → 使用预设「robotou daochu」导出到子文件夹「矫正」</li>
+      <li>打开 RoboTou Stacker，设置输入文件夹为「矫正」</li>
+      <li>自动检测堆叠数量，创建蒙版</li>
+      <li>自动点击开始，等待堆叠完成</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>脚本文件</h2>
+    <div class="files">
+      <div>
+        <div class="name">run.sh</div>
+        <div class="desc">主入口脚本，串联 LR + RoboTou</div>
+      </div>
+      <div>
+        <div class="name">lr_workflow.applescript</div>
+        <div class="desc">Lightroom 导入 + 预设导出自动化</div>
+      </div>
+      <div>
+        <div class="name">robotou_workflow.applescript</div>
+        <div class="desc">RoboTou Stacker 点击自动化</div>
+      </div>
+      <div>
+        <div class="name">SKILL.md</div>
+        <div class="desc">Skill 定义与使用说明</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>使用方法</h2>
+    <p style="margin-bottom:12px;">确保已安装 Lightroom Classic 和 RoboTou Stacker，并配置好导出预设「robotou daochu」。</p>
+    <code>bash scripts/run.sh /path/to/raw/files</code>
+    <p style="margin-top:12px;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+      需要 macOS 辅助功能权限（系统设置 → 隐私与安全性 → 辅助功能）
+    </p>
+  </div>
+
+  <div class="section" style="text-align:center;border-color:transparent;background:transparent;">
+    <p style="color:var(--text-muted);font-size:0.8rem;">
+      薯条stars · 贺意 · <a href="https://github.com/shutiaostars/shutiao.github.io/tree/main/raw-to-stack">GitHub</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>
