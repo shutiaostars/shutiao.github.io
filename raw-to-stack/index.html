@@ -132,10 +132,18 @@ code{
   padding:12px 16px;
 }
 .files .name{
-  color:var(--gold-light);
   font-family:'SF Mono','Fira Code',monospace;
   font-size:0.8rem;
   margin-bottom:4px;
+}
+.files .name a{
+  color:var(--gold-light);
+  text-decoration:none;
+  border-bottom:1px dashed var(--gold-dim);
+}
+.files .name a:hover{
+  color:var(--gold);
+  border-bottom-style:solid;
 }
 .files .desc{
   color:var(--text-muted);
@@ -186,19 +194,19 @@ a:hover{color:var(--gold-light)}
     <h2>脚本文件</h2>
     <div class="files">
       <div>
-        <div class="name">run.sh</div>
+        <div class="name"><a href="https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/scripts/run.sh" download>run.sh</a></div>
         <div class="desc">主入口脚本，串联 LR + RoboTou</div>
       </div>
       <div>
-        <div class="name">lr_workflow.applescript</div>
+        <div class="name"><a href="https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/scripts/lr_workflow.applescript" download>lr_workflow.applescript</a></div>
         <div class="desc">Lightroom 导入 + 预设导出自动化</div>
       </div>
       <div>
-        <div class="name">robotou_workflow.applescript</div>
+        <div class="name"><a href="https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/scripts/robotou_workflow.applescript" download>robotou_workflow.applescript</a></div>
         <div class="desc">RoboTou Stacker 点击自动化</div>
       </div>
       <div>
-        <div class="name">SKILL.md</div>
+        <div class="name"><a href="https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/SKILL.md" download>SKILL.md</a></div>
         <div class="desc">Skill 定义与使用说明</div>
       </div>
     </div>
@@ -216,16 +224,12 @@ a:hover{color:var(--gold-light)}
   <div class="section">
     <h2>下载</h2>
     <p style="margin-bottom:16px;color:var(--text-secondary);font-size:0.9rem;font-weight:300;">
-      你可以通过以下方式获取全部脚本：
+      点击上方脚本文件名即可单独下载，或一键打包下载整个 skill：
     </p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-      <a href="https://github.com/shutiaostars/shutiaostars.github.io/archive/refs/heads/main.zip" class="btn" style="display:inline-block;padding:10px 24px;background:var(--gold-dim);color:var(--black);border-radius:8px;font-weight:500;font-size:0.9rem;transition:background 0.2s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold-dim)'">⬇ 下载 ZIP</a>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="https://download-directory.github.io/?url=https://github.com/shutiaostars/shutiaostars.github.io/tree/main/raw-to-stack" class="btn" style="display:inline-block;padding:10px 24px;background:var(--gold-dim);color:var(--black);border-radius:8px;font-weight:500;font-size:0.9rem;transition:background 0.2s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold-dim)'">⬇ 下载 Skill ZIP</a>
+      <a href="https://github.com/shutiaostars/shutiaostars.github.io/tree/main/raw-to-stack" class="btn" style="display:inline-block;padding:10px 24px;background:transparent;color:var(--gold);border:1px solid var(--dark-border);border-radius:8px;font-weight:500;font-size:0.9rem;transition:background 0.2s;" onmouseover="this.style.background='var(--dark-card)'" onmouseout="this.style.background='transparent'">在 GitHub 上浏览</a>
     </div>
-    <p style="margin-bottom:8px;color:var(--text-secondary);font-size:0.9rem;font-weight:300;">或用 git clone 获取整个仓库：</p>
-    <code style="display:block;padding:12px 16px;margin-bottom:8px;">git clone https://github.com/shutiaostars/shutiaostars.github.io.git</code>
-    <p style="color:var(--text-muted);font-size:0.85rem;font-weight:300;">
-      然后进入 <code>raw-to-stack/</code> 目录使用
-    </p>
   </div>
 
   <div class="section" style="text-align:center;border-color:transparent;background:transparent;">
