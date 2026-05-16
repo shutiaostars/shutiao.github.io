@@ -222,6 +222,14 @@ a:hover{color:var(--gold-light)}
   </div>
 
   <div class="section">
+    <h2>一键安装</h2>
+    <p style="margin-bottom:12px;color:var(--text-secondary);font-size:0.9rem;font-weight:300;">
+      在终端执行以下命令，自动安装到 Claude Code 的 skills 目录：
+    </p>
+    <code style="display:block;padding:14px 18px;font-size:0.8rem;line-height:1.6;word-break:break-all;">mkdir -p ~/.claude/skills/raw-to-stack/scripts && curl -sL "https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/SKILL.md" -o ~/.claude/skills/raw-to-stack/SKILL.md && curl -sL "https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/scripts/run.sh" -o ~/.claude/skills/raw-to-stack/scripts/run.sh && curl -sL "https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/scripts/lr_workflow.applescript" -o ~/.claude/skills/raw-to-stack/scripts/lr_workflow.applescript && curl -sL "https://raw.githubusercontent.com/shutiaostars/shutiaostars.github.io/main/raw-to-stack/scripts/robotou_workflow.applescript" -o ~/.claude/skills/raw-to-stack/scripts/robotou_workflow.applescript && chmod +x ~/.claude/skills/raw-to-stack/scripts/run.sh && echo "✓ raw-to-stack skill 安装完成"</code>
+  </div>
+
+  <div class="section">
     <h2>下载</h2>
     <p style="margin-bottom:16px;color:var(--text-secondary);font-size:0.9rem;font-weight:300;">
       点击上方脚本文件名即可单独下载，或一键打包下载整个 skill：
